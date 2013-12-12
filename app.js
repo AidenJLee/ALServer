@@ -29,7 +29,7 @@ env.initialize(function(err, app, db) {
         res.end();
     });
     
-    
+    // TODO : mapRoute 방식으로 변경
     /** USERS **/
     app.post('/v1/users', restful(db, 'users').documentCreate);         // 새로운 도큐먼트 생성
     app.get('/v1/users', restful(db, 'users').documentFinds);           // 도큐먼트 리스트 반환 (쿼리 정보는 param에 담겨져 온다)
